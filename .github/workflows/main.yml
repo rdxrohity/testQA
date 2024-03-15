@@ -23,7 +23,6 @@ jobs:
           docker-compose up -d --build
           docker-compose down
           docker-compose up -d
-          docker exec -it web bash
         working-directory: tech-review-qacicd
 
   test:
@@ -46,6 +45,7 @@ jobs:
 
       - name: Run Python Unit Tests
         run: |
+          docker exec -it web bash
           python manage.py makemigrations testapp
           python manage.py migrate
           python manage.py test
