@@ -36,11 +36,4 @@ RUN pip install pipenv && pipenv install --system
 
 # Copy the rest of the application code
 COPY . /code/
-
-# Apply Django migrations
-RUN python manage.py makemigrations testapp \
-    && python manage.py migrate
-
-# Command to run the application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-
+CMD ["uwsgi", "--ini", "uwsgi.ini" ]
