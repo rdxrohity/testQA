@@ -23,7 +23,7 @@ jobs:
           docker-compose up -d --build
           docker-compose down
           docker-compose up -d
-        working-directory: path/to/your/project
+        working-directory: tech-review-qacicd
 
   test:
     runs-on: ubuntu-latest
