@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: TesQA Pipeline
 
 on:
   push:
@@ -41,19 +41,19 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-        working-directory: path/to/your/project
+        working-directory: tech-review-qacicd
 
       - name: Run Python Unit Tests
         run: |
           python manage.py makemigrations testapp
           python manage.py migrate
           python manage.py test
-        working-directory: path/to/your/project
+        working-directory: tech-review-qacicd
 
       - name: Run Selenium Tests
         run: |
           # Commands to run Selenium tests
-        working-directory: path/to/your/project
+        working-directory: tech-review-qacicd
 
   deploy:
     runs-on: ubuntu-latest
@@ -74,5 +74,5 @@ jobs:
       - name: Deploy to AWS EKS and ECR
         run: |
           # Commands to deploy to AWS EKS and ECR
-        working-directory: path/to/your/project
+        working-directory: tech-review-qacicd
 
