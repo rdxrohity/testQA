@@ -46,10 +46,11 @@ jobs:
 
       - name: Run Python Unit Tests
         run: |
-          docker exec -it web bash
-          python manage.py makemigrations testapp
-          python manage.py migrate
-          python manage.py test
+          docker-compose run web python manage.py test
+          #docker exec -it web bash
+          #python manage.py makemigrations testapp
+          #python manage.py migrate
+          #python manage.py test
         working-directory: tech-review-qacicd
 
       - name: Run Selenium Tests
