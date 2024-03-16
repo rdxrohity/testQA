@@ -46,7 +46,7 @@ jobs:
 
       - name: Run Python Unit Tests
         run: |
-          docker exec -it web bash
+          #docker exec -it web bash
           python manage.py makemigrations testapp
           python manage.py migrate
           python manage.py test
