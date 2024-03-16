@@ -59,4 +59,4 @@ uWSGI==2.0.20
 watchtower==3.0.0
 weasyprint==51
 debugpy==1.5.1
-pygeos==0.12.0 --no-binary=pygeos
+#pygeos==0.12.0 --no-binary=pygeos
