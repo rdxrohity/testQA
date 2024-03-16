@@ -40,7 +40,8 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run:  |
+          #pip install -r requirements.txt
         working-directory: tech-review-qacicd
 
       - name: Run Python Unit Tests
